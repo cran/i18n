@@ -4,25 +4,16 @@
 #' functions. The list object names, the number of elements they hold, and the
 #' functions they nicely pair with are:
 #' 
-#' `locale_names_elements` (4) -> `cldr_locale_names()`
-#' `currency_codes` (303) -> `cldr_currency()`
+#' `locale_list` (574) -> several `cldr_*()` functions
+#' `currency_code_list` (305) -> `cldr_currency()`
 #' `currencies_elements` (5) -> `cldr_currency()`
+#' `locale_names_elements` (4) -> `cldr_locale_names()`
 #' `dates_elements` (28) -> `cldr_dates()`
 #' `numbers_elements` (26) -> `cldr_numbers()`
 #' `characters_elements` (12) -> `cldr_characters()`
 #' 
 #' @name element_lists
 NULL
-
-#' @rdname element_lists
-#' @export
-locale_names_elements <-
-  list(
-    lang_names = "lang_names",
-    script_names = "script_names",
-    territory_names = "territory_names",
-    variant_names = "variant_names"
-  )
 
 #' @rdname element_lists
 #' @export
@@ -72,32 +63,33 @@ locale_list <-
     `en-LC` = "en-LC", `en-LR` = "en-LR", `en-LS` = "en-LS", 
     `en-MG` = "en-MG", `en-MH` = "en-MH", `en-MO` = "en-MO", 
     `en-MP` = "en-MP", `en-MS` = "en-MS", `en-MT` = "en-MT", 
-    `en-MU` = "en-MU", `en-MW` = "en-MW", `en-MY` = "en-MY", 
-    `en-NA` = "en-NA", `en-NF` = "en-NF", `en-NG` = "en-NG", 
-    `en-NL` = "en-NL", `en-NR` = "en-NR", `en-NU` = "en-NU", 
-    `en-NZ` = "en-NZ", `en-PG` = "en-PG", `en-PH` = "en-PH", 
-    `en-PK` = "en-PK", `en-PN` = "en-PN", `en-PR` = "en-PR", 
-    `en-PW` = "en-PW", `en-RW` = "en-RW", `en-SB` = "en-SB", 
-    `en-SC` = "en-SC", `en-SD` = "en-SD", `en-SE` = "en-SE", 
-    `en-SG` = "en-SG", `en-SH` = "en-SH", `en-SI` = "en-SI", 
-    `en-SL` = "en-SL", `en-SS` = "en-SS", `en-SX` = "en-SX", 
-    `en-SZ` = "en-SZ", `en-TC` = "en-TC", `en-TK` = "en-TK", 
-    `en-TO` = "en-TO", `en-TT` = "en-TT", `en-TV` = "en-TV", 
-    `en-TZ` = "en-TZ", `en-UG` = "en-UG", `en-UM` = "en-UM", 
-    `en-VC` = "en-VC", `en-VG` = "en-VG", `en-VI` = "en-VI", 
-    `en-VU` = "en-VU", `en-WS` = "en-WS", `en-ZA` = "en-ZA", 
-    `en-ZM` = "en-ZM", `en-ZW` = "en-ZW", eo = "eo", es = "es", 
-    `es-419` = "es-419", `es-AR` = "es-AR", `es-BO` = "es-BO", 
-    `es-BR` = "es-BR", `es-BZ` = "es-BZ", `es-CL` = "es-CL", 
-    `es-CO` = "es-CO", `es-CR` = "es-CR", `es-CU` = "es-CU", 
-    `es-DO` = "es-DO", `es-EA` = "es-EA", `es-EC` = "es-EC", 
-    `es-GQ` = "es-GQ", `es-GT` = "es-GT", `es-HN` = "es-HN", 
-    `es-IC` = "es-IC", `es-MX` = "es-MX", `es-NI` = "es-NI", 
-    `es-PA` = "es-PA", `es-PE` = "es-PE", `es-PH` = "es-PH", 
-    `es-PR` = "es-PR", `es-PY` = "es-PY", `es-SV` = "es-SV", 
-    `es-US` = "es-US", `es-UY` = "es-UY", `es-VE` = "es-VE", 
-    et = "et", eu = "eu", ewo = "ewo", fa = "fa", `fa-AF` = "fa-AF", 
-    ff = "ff", `ff-Adlm` = "ff-Adlm", `ff-Adlm-BF` = "ff-Adlm-BF", 
+    `en-MU` = "en-MU", `en-MV` = "en-MV", `en-MW` = "en-MW", 
+    `en-MY` = "en-MY", `en-NA` = "en-NA", `en-NF` = "en-NF", 
+    `en-NG` = "en-NG", `en-NL` = "en-NL", `en-NR` = "en-NR", 
+    `en-NU` = "en-NU", `en-NZ` = "en-NZ", `en-PG` = "en-PG", 
+    `en-PH` = "en-PH", `en-PK` = "en-PK", `en-PN` = "en-PN", 
+    `en-PR` = "en-PR", `en-PW` = "en-PW", `en-RW` = "en-RW", 
+    `en-SB` = "en-SB", `en-SC` = "en-SC", `en-SD` = "en-SD", 
+    `en-SE` = "en-SE", `en-SG` = "en-SG", `en-SH` = "en-SH", 
+    `en-SI` = "en-SI", `en-SL` = "en-SL", `en-SS` = "en-SS", 
+    `en-SX` = "en-SX", `en-SZ` = "en-SZ", `en-TC` = "en-TC", 
+    `en-TK` = "en-TK", `en-TO` = "en-TO", `en-TT` = "en-TT", 
+    `en-TV` = "en-TV", `en-TZ` = "en-TZ", `en-UG` = "en-UG", 
+    `en-UM` = "en-UM", `en-VC` = "en-VC", `en-VG` = "en-VG", 
+    `en-VI` = "en-VI", `en-VU` = "en-VU", `en-WS` = "en-WS", 
+    `en-ZA` = "en-ZA", `en-ZM` = "en-ZM", `en-ZW` = "en-ZW", 
+    eo = "eo", es = "es", `es-419` = "es-419", `es-AR` = "es-AR", 
+    `es-BO` = "es-BO", `es-BR` = "es-BR", `es-BZ` = "es-BZ", 
+    `es-CL` = "es-CL", `es-CO` = "es-CO", `es-CR` = "es-CR", 
+    `es-CU` = "es-CU", `es-DO` = "es-DO", `es-EA` = "es-EA", 
+    `es-EC` = "es-EC", `es-GQ` = "es-GQ", `es-GT` = "es-GT", 
+    `es-HN` = "es-HN", `es-IC` = "es-IC", `es-MX` = "es-MX", 
+    `es-NI` = "es-NI", `es-PA` = "es-PA", `es-PE` = "es-PE", 
+    `es-PH` = "es-PH", `es-PR` = "es-PR", `es-PY` = "es-PY", 
+    `es-SV` = "es-SV", `es-US` = "es-US", `es-UY` = "es-UY", 
+    `es-VE` = "es-VE", et = "et", eu = "eu", ewo = "ewo",
+    fa = "fa", `fa-AF` = "fa-AF", ff = "ff", `ff-Adlm` = "ff-Adlm",
+    `ff-Adlm-BF` = "ff-Adlm-BF", 
     `ff-Adlm-CM` = "ff-Adlm-CM", `ff-Adlm-GH` = "ff-Adlm-GH", 
     `ff-Adlm-GM` = "ff-Adlm-GM", `ff-Adlm-GW` = "ff-Adlm-GW", 
     `ff-Adlm-LR` = "ff-Adlm-LR", `ff-Adlm-MR` = "ff-Adlm-MR", 
@@ -128,31 +120,32 @@ locale_list <-
     `fr-YT` = "fr-YT", fur = "fur", fy = "fy", ga = "ga", `ga-GB` = "ga-GB", 
     gd = "gd", gl = "gl", gsw = "gsw", `gsw-FR` = "gsw-FR", `gsw-LI` = "gsw-LI", 
     gu = "gu", guz = "guz", gv = "gv", ha = "ha", `ha-GH` = "ha-GH", 
-    `ha-NE` = "ha-NE", haw = "haw", he = "he", hi = "hi", hr = "hr", 
-    `hr-BA` = "hr-BA", hsb = "hsb", hu = "hu", hy = "hy", ia = "ia", 
-    id = "id", ig = "ig", ii = "ii", is = "is", it = "it", `it-CH` = "it-CH", 
-    `it-SM` = "it-SM", `it-VA` = "it-VA", ja = "ja", jgo = "jgo", 
-    jmc = "jmc", jv = "jv", ka = "ka", kab = "kab", kam = "kam", 
-    kde = "kde", kea = "kea", kgp = "kgp", khq = "khq", ki = "ki", 
-    kk = "kk", kkj = "kkj", kl = "kl", kln = "kln", km = "km", 
-    kn = "kn", ko = "ko", `ko-KP` = "ko-KP", kok = "kok", ks = "ks", 
-    `ks-Arab` = "ks-Arab", ksb = "ksb", ksf = "ksf", ksh = "ksh", 
-    ku = "ku", kw = "kw", ky = "ky", lag = "lag", lb = "lb", 
-    lg = "lg", lkt = "lkt", ln = "ln", `ln-AO` = "ln-AO", `ln-CF` = "ln-CF", 
-    `ln-CG` = "ln-CG", lo = "lo", lrc = "lrc", `lrc-IQ` = "lrc-IQ", 
-    lt = "lt", lu = "lu", luo = "luo", luy = "luy", lv = "lv", 
-    mai = "mai", mas = "mas", `mas-TZ` = "mas-TZ", mer = "mer", 
-    mfe = "mfe", mg = "mg", mgh = "mgh", mgo = "mgo", mi = "mi", 
-    mk = "mk", ml = "ml", mn = "mn", mni = "mni", `mni-Beng` = "mni-Beng", 
-    mr = "mr", ms = "ms", `ms-BN` = "ms-BN", `ms-ID` = "ms-ID", 
-    `ms-SG` = "ms-SG", mt = "mt", mua = "mua", my = "my", mzn = "mzn", 
-    naq = "naq", nb = "nb", `nb-SJ` = "nb-SJ", nd = "nd", nds = "nds", 
-    `nds-NL` = "nds-NL", ne = "ne", `ne-IN` = "ne-IN", nl = "nl", 
-    `nl-AW` = "nl-AW", `nl-BE` = "nl-BE", `nl-BQ` = "nl-BQ", 
-    `nl-CW` = "nl-CW", `nl-SR` = "nl-SR", `nl-SX` = "nl-SX", 
-    nmg = "nmg", nn = "nn", nnh = "nnh", no = "no", nus = "nus", 
-    nyn = "nyn", om = "om", `om-KE` = "om-KE", or = "or", os = "os", 
-    `os-RU` = "os-RU", pa = "pa", `pa-Arab` = "pa-Arab", `pa-Guru` = "pa-Guru", 
+    `ha-NE` = "ha-NE", haw = "haw", he = "he", hi = "hi", `hi-Latn` = "hi-Latn", 
+    hr = "hr", `hr-BA` = "hr-BA", hsb = "hsb", hu = "hu", hy = "hy", 
+    ia = "ia", id = "id", ig = "ig", ii = "ii", is = "is", it = "it", 
+    `it-CH` = "it-CH", `it-SM` = "it-SM", `it-VA` = "it-VA", 
+    ja = "ja", jgo = "jgo", jmc = "jmc", jv = "jv", ka = "ka", 
+    kab = "kab", kam = "kam", kde = "kde", kea = "kea", kgp = "kgp", 
+    khq = "khq", ki = "ki", kk = "kk", kkj = "kkj", kl = "kl", 
+    kln = "kln", km = "km", kn = "kn", ko = "ko", `ko-KP` = "ko-KP", 
+    kok = "kok", ks = "ks", `ks-Arab` = "ks-Arab", `ks-Deva` = "ks-Deva", 
+    ksb = "ksb", ksf = "ksf", ksh = "ksh", ku = "ku", kw = "kw", 
+    ky = "ky", lag = "lag", lb = "lb", lg = "lg", lkt = "lkt", 
+    ln = "ln", `ln-AO` = "ln-AO", `ln-CF` = "ln-CF", `ln-CG` = "ln-CG", 
+    lo = "lo", lrc = "lrc", `lrc-IQ` = "lrc-IQ", lt = "lt", lu = "lu", 
+    luo = "luo", luy = "luy", lv = "lv", mai = "mai", mas = "mas", 
+    `mas-TZ` = "mas-TZ", mer = "mer", mfe = "mfe", mg = "mg", 
+    mgh = "mgh", mgo = "mgo", mi = "mi", mk = "mk", ml = "ml", 
+    mn = "mn", mni = "mni", `mni-Beng` = "mni-Beng", mr = "mr", 
+    ms = "ms", `ms-BN` = "ms-BN", `ms-ID` = "ms-ID", `ms-SG` = "ms-SG", 
+    mt = "mt", mua = "mua", my = "my", mzn = "mzn", naq = "naq", 
+    nb = "nb", `nb-SJ` = "nb-SJ", nd = "nd", nds = "nds", `nds-NL` = "nds-NL", 
+    ne = "ne", `ne-IN` = "ne-IN", nl = "nl", `nl-AW` = "nl-AW", 
+    `nl-BE` = "nl-BE", `nl-BQ` = "nl-BQ", `nl-CW` = "nl-CW", 
+    `nl-SR` = "nl-SR", `nl-SX` = "nl-SX", nmg = "nmg", nn = "nn", 
+    nnh = "nnh", no = "no", nus = "nus", nyn = "nyn", om = "om", 
+    `om-KE` = "om-KE", or = "or", os = "os", `os-RU` = "os-RU", 
+    pa = "pa", `pa-Arab` = "pa-Arab", `pa-Guru` = "pa-Guru", 
     pcm = "pcm", pl = "pl", ps = "ps", `ps-PK` = "ps-PK", pt = "pt", 
     `pt-AO` = "pt-AO", `pt-CH` = "pt-CH", `pt-CV` = "pt-CV", 
     `pt-GQ` = "pt-GQ", `pt-GW` = "pt-GW", `pt-LU` = "pt-LU", 
@@ -173,7 +166,7 @@ locale_list <-
     `sr-Cyrl-ME` = "sr-Cyrl-ME", `sr-Cyrl-XK` = "sr-Cyrl-XK", 
     `sr-Latn` = "sr-Latn", `sr-Latn-BA` = "sr-Latn-BA",
     `sr-Latn-ME` = "sr-Latn-ME", `sr-Latn-XK` = "sr-Latn-XK", su = "su",
-    `su-Latn` = "su-Latn", sv = "sv", `sv-AX` = "sv-AX", `sv-FI` = "sv-FI",
+    `su-Latn` = "su-Latn", sv = "sv", `sv-AX` = "sv-AX", `sv-FI` = "sv-FI", 
     sw = "sw", `sw-CD` = "sw-CD", `sw-KE` = "sw-KE", `sw-UG` = "sw-UG", 
     ta = "ta", `ta-LK` = "ta-LK", `ta-MY` = "ta-MY", `ta-SG` = "ta-SG", 
     te = "te", teo = "teo", `teo-KE` = "teo-KE", tg = "tg", th = "th", 
@@ -240,23 +233,33 @@ currency_code_list <-
     QAR = "QAR", RHD = "RHD", ROL = "ROL", RON = "RON", RSD = "RSD", 
     RUB = "RUB", RUR = "RUR", RWF = "RWF", SAR = "SAR", SBD = "SBD", 
     SCR = "SCR", SDD = "SDD", SDG = "SDG", SDP = "SDP", SEK = "SEK", 
-    SGD = "SGD", SHP = "SHP", SIT = "SIT", SKK = "SKK", SLL = "SLL", 
-    SOS = "SOS", SRD = "SRD", SRG = "SRG", SSP = "SSP", STD = "STD", 
-    STN = "STN", SUR = "SUR", SVC = "SVC", SYP = "SYP", SZL = "SZL", 
-    THB = "THB", TJR = "TJR", TJS = "TJS", TMM = "TMM", TMT = "TMT", 
-    TND = "TND", TOP = "TOP", TPE = "TPE", TRL = "TRL", TRY = "TRY", 
-    TTD = "TTD", TWD = "TWD", TZS = "TZS", UAH = "UAH", UAK = "UAK", 
-    UGS = "UGS", UGX = "UGX", USD = "USD", USN = "USN", USS = "USS", 
-    UYI = "UYI", UYP = "UYP", UYU = "UYU", UYW = "UYW", UZS = "UZS", 
-    VEB = "VEB", VEF = "VEF", VES = "VES", VND = "VND", VNN = "VNN", 
-    VUV = "VUV", WST = "WST", XAF = "XAF", XAG = "XAG", XAU = "XAU", 
-    XBA = "XBA", XBB = "XBB", XBC = "XBC", XBD = "XBD", XCD = "XCD", 
-    XDR = "XDR", XEU = "XEU", XFO = "XFO", XFU = "XFU", XOF = "XOF", 
-    XPD = "XPD", XPF = "XPF", XPT = "XPT", XRE = "XRE", XSU = "XSU", 
-    XTS = "XTS", XUA = "XUA", XXX = "XXX", YDD = "YDD", YER = "YER", 
-    YUD = "YUD", YUM = "YUM", YUN = "YUN", YUR = "YUR", ZAL = "ZAL", 
-    ZAR = "ZAR", ZMK = "ZMK", ZMW = "ZMW", ZRN = "ZRN", ZRZ = "ZRZ", 
-    ZWD = "ZWD", ZWL = "ZWL", ZWR = "ZWR"
+    SGD = "SGD", SHP = "SHP", SIT = "SIT", SKK = "SKK", SLE = "SLE", 
+    SLL = "SLL", SOS = "SOS", SRD = "SRD", SRG = "SRG", SSP = "SSP", 
+    STD = "STD", STN = "STN", SUR = "SUR", SVC = "SVC", SYP = "SYP", 
+    SZL = "SZL", THB = "THB", TJR = "TJR", TJS = "TJS", TMM = "TMM", 
+    TMT = "TMT", TND = "TND", TOP = "TOP", TPE = "TPE", TRL = "TRL", 
+    TRY = "TRY", TTD = "TTD", TWD = "TWD", TZS = "TZS", UAH = "UAH", 
+    UAK = "UAK", UGS = "UGS", UGX = "UGX", USD = "USD", USN = "USN", 
+    USS = "USS", UYI = "UYI", UYP = "UYP", UYU = "UYU", UYW = "UYW", 
+    UZS = "UZS", VEB = "VEB", VED = "VED", VEF = "VEF", VES = "VES", 
+    VND = "VND", VNN = "VNN", VUV = "VUV", WST = "WST", XAF = "XAF", 
+    XAG = "XAG", XAU = "XAU", XBA = "XBA", XBB = "XBB", XBC = "XBC", 
+    XBD = "XBD", XCD = "XCD", XDR = "XDR", XEU = "XEU", XFO = "XFO", 
+    XFU = "XFU", XOF = "XOF", XPD = "XPD", XPF = "XPF", XPT = "XPT", 
+    XRE = "XRE", XSU = "XSU", XTS = "XTS", XUA = "XUA", XXX = "XXX", 
+    YDD = "YDD", YER = "YER", YUD = "YUD", YUM = "YUM", YUN = "YUN", 
+    YUR = "YUR", ZAL = "ZAL", ZAR = "ZAR", ZMK = "ZMK", ZMW = "ZMW", 
+    ZRN = "ZRN", ZRZ = "ZRZ", ZWD = "ZWD", ZWL = "ZWL", ZWR = "ZWR"
+  )
+
+#' @rdname element_lists
+#' @export
+locale_names_elements <-
+  list(
+    lang_names = "lang_names",
+    script_names = "script_names",
+    territory_names = "territory_names",
+    variant_names = "variant_names"
   )
 
 #' @rdname element_lists
@@ -277,6 +280,14 @@ dates_elements <-
     months_format_abbrev = "months_format_abbrev",
     months_format_narrow = "months_format_narrow", 
     months_format_wide = "months_format_wide",
+    months_standalone_abbrev = "months_standalone_abbrev",
+    months_standalone_narrow = "months_standalone_narrow", 
+    months_standalone_wide = "months_standalone_wide",
+    days_format_abbrev = "days_format_abbrev",
+    days_format_narrow = "days_format_narrow",
+    days_format_short = "days_format_short",
+    days_format_wide = "days_format_wide",
+    days_standalone_abbrev = "days_standalone_abbrev",
     days_standalone_narrow = "days_standalone_narrow", 
     days_standalone_short = "days_standalone_short",
     days_standalone_wide = "days_standalone_wide", 
@@ -299,6 +310,7 @@ dates_elements <-
     date_skeletons = "date_skeletons", 
     time_formats = "time_formats",
     time_skeletons = "time_skeletons", 
+    date_time_patterns = "date_time_patterns",
     date_time_available_formats = "date_time_available_formats", 
     date_time_append_items = "date_time_append_items",
     date_time_interval_formats = "date_time_interval_formats"
@@ -354,7 +366,7 @@ characters_elements <-
     stricter_scope_number = "stricter_scope_number"
   )
 
-#' Get a single localized value from the [locale_names] dataset
+#' Get a localized list of locale names from the [locale_names] dataset
 #'
 #' @description
 #' The [locale_names] table contains information on how to express components of
@@ -564,48 +576,6 @@ cldr_numbers <- function(
   values
 }
 
-#' Get localized values from the [character_labels] dataset
-#'
-#' @description
-#' The [character_labels] table contains information on character patterns
-#' and character labels across `r length(all_locales)` locales. The
-#' `cldr_character_labels()` function allows one to extract element values from
-#' the table by supplying the `locale` and one of the following element names:
-#' 
-#' - `"patterns"`: corresponds to the `character_label_patterns` column in
-#' [character_labels]
-#' - `"labels"`: is the `character_labels` column in [character_labels]
-#' 
-#' @param locale The locale ID for which to obtain the data from the
-#'   `character_labels` table.
-#' @param element The element from which information will be obtained for the
-#'   specified `locale`.
-#' 
-#' @return A named list.
-#' 
-#' @export
-cldr_character_labels <- function(
-    locale = "en",
-    element = c("patterns", "labels")
-) {
-  
-  element <- match.arg(element)
-  
-  element_full <-
-    switch(
-      element,
-      patterns = "character_label_patterns",
-      labels = "character_labels"
-    )
-  
-  values <- character_labels[character_labels$locale == locale,][[element_full]]
-  values <- unlist(values, use.names = TRUE)
-  
-  names(values) <- gsub("^value\\.", "", names(values))
-  
-  as.list(values)
-}
-
 #' Get localized values from the [characters] dataset
 #'
 #' @description
@@ -652,4 +622,46 @@ cldr_characters <- function(
   }
   
   values
+}
+
+#' Get localized values from the [character_labels] dataset
+#'
+#' @description
+#' The [character_labels] table contains information on character patterns
+#' and character labels across `r length(all_locales)` locales. The
+#' `cldr_character_labels()` function allows one to extract element values from
+#' the table by supplying the `locale` and one of the following element names:
+#' 
+#' - `"patterns"`: corresponds to the `character_label_patterns` column in
+#' [character_labels]
+#' - `"labels"`: is the `character_labels` column in [character_labels]
+#' 
+#' @param locale The locale ID for which to obtain the data from the
+#'   `character_labels` table.
+#' @param element The element from which information will be obtained for the
+#'   specified `locale`.
+#' 
+#' @return A named list.
+#' 
+#' @export
+cldr_character_labels <- function(
+    locale = "en",
+    element = c("patterns", "labels")
+) {
+  
+  element <- match.arg(element)
+  
+  element_full <-
+    switch(
+      element,
+      patterns = "character_label_patterns",
+      labels = "character_labels"
+    )
+  
+  values <- character_labels[character_labels$locale == locale,][[element_full]]
+  values <- unlist(values, use.names = TRUE)
+  
+  names(values) <- gsub("^value\\.", "", names(values))
+  
+  as.list(values)
 }

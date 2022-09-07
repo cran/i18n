@@ -5,7 +5,7 @@
 \alias{locale_names}
 \title{A table with localized language, script, and territory names}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 571 rows and 5 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 574 rows and 5 columns.
 }
 \usage{
 locale_names
@@ -13,7 +13,7 @@ locale_names
 \description{
 The \code{locale_names} table contains localized names for languages, script
 names, names for territories, and names for variants. There are
-571 rows and the following 5 columns:
+574 rows and the following 5 columns:
 \itemize{
 \item \code{locale} (\code{character})
 \item \code{lang_names} (\verb{named list [variable length]})
@@ -23,9 +23,9 @@ names, names for territories, and names for variants. There are
 }
 
 The \code{lang_names} column contains named lists for all localized language
-names. The \code{script_names} column holds named lists for all localized
-script names, and \code{territory_names} has all of the localized territory
-names per locale. The \code{variant_names} list column containing named lists for all localized
-variant names.
+names. The \code{script_names} column holds named lists for all localized script
+names, and \code{territory_names} has all of the localized territory names per
+locale. The \code{variant_names} list column containing named lists for all
+localized variant names.
 }
 \keyword{datasets}

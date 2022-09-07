@@ -1,0 +1,22 @@
+utils::globalVariables(
+  c(
+    "all_locales",
+    "all_currency_codes",
+    "default_locales",
+    "locale_names",
+    "dates",
+    "dates_generic",
+    "numbers",
+    "currencies",
+    "characters",
+    "character_labels",
+    "delimiters",
+    "layout",
+    "script_metadata",
+    "units",
+    "tz_exemplar",
+    "tz_map",
+    "tz_formats",
+    "tz_bcp_id"
+  )
+)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_values.R
 \name{cldr_locale_names}
 \alias{cldr_locale_names}
-\title{Get a single localized value from the \link{locale_names} dataset}
+\title{Get a localized list of locale names from the \link{locale_names} dataset}
 \usage{
 cldr_locale_names(locale = "en", element = locale_names_elements$lang_names)
 }
@@ -19,7 +19,7 @@ A named list.
 }
 \description{
 The \link{locale_names} table contains information on how to express components of
-locale codes and this is localized across 571 locales.
+locale codes and this is localized across 574 locales.
 The \code{cldr_locale_names()} function allows one to extract a named list using
 a \code{locale} and one of the following element names:
 \itemize{

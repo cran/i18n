@@ -48,10 +48,10 @@
 #' - `variant_names` (`named list [variable length]`)
 #' 
 #' The `lang_names` column contains named lists for all localized language
-#' names. The `script_names` column holds named lists for all localized
-#' script names, and `territory_names` has all of the localized territory
-#' names per locale. The `variant_names` list column containing named lists for all localized
-#' variant names.
+#' names. The `script_names` column holds named lists for all localized script
+#' names, and `territory_names` has all of the localized territory names per
+#' locale. The `variant_names` list column containing named lists for all
+#' localized variant names.
 #' 
 "locale_names"
 
@@ -60,12 +60,20 @@
 #' @description
 #' The `dates` table contains localized data for constructing dates and times
 #' across `r length(all_locales)` locales. There are `r length(all_locales)`
-#' rows and the following 29 columns:
+#' rows and the following `r ncol(dates)` columns:
 #' 
 #' - `locale` (`character`)
 #' - `months_format_abbrev` (`named list [length of 12]`)
 #' - `months_format_narrow` (`named list [length of 12]`)
 #' - `months_format_wide` (`named list [length of 12]`)
+#' - `months_standalone_abbrev` (`named list [length of 12]`)
+#' - `months_standalone_narrow` (`named list [length of 12]`)
+#' - `months_standalone_wide` (`named list [length of 12]`)
+#' - `days_format_abbrev` (`named list [length of 7]`)
+#' - `days_format_narrow` (`named list [length of 7]`)
+#' - `days_format_short` (`named list [length of 7]`)
+#' - `days_format_wide` (`named list [length of 7]`)
+#' - `days_standalone_abbrev` (`named list [length of 7]`)
 #' - `days_standalone_narrow` (`named list [length of 7]`)
 #' - `days_standalone_short` (`named list [length of 7]`)
 #' - `days_standalone_wide` (`named list [length of 7]`)
@@ -88,11 +96,61 @@
 #' - `date_skeletons` (`named list [length of 4]`)
 #' - `time_formats` (`named list [variable length]`)
 #' - `time_skeletons` (`named list [variable length]`)
+#' - `date_time_patterns` (`named list [length of 4]`)
 #' - `date_time_available_formats` (`named list [variable length]`)
 #' - `date_time_append_items` (`named list [length of 11]`)
 #' - `date_time_interval_formats` (`named list [variable length]`)
 #'
 "dates"
+
+#' A table with localized generic date attributes and descriptors
+#'
+#' @description
+#' The `dates_generic` table contains localized data for constructing dates and
+#' times across `r length(all_locales)` locales. There are 
+#' `r length(all_locales)` rows and the following `r ncol(dates_generic)`
+#' columns:
+#' 
+#' - `locale` (`character`)
+#' - `months_format_abbrev` (`named list [length of 12]`)
+#' - `months_format_narrow` (`named list [length of 12]`)
+#' - `months_format_wide` (`named list [length of 12]`)
+#' - `months_standalone_abbrev` (`named list [length of 12]`)
+#' - `months_standalone_narrow` (`named list [length of 12]`)
+#' - `months_standalone_wide` (`named list [length of 12]`)
+#' - `days_format_abbrev` (`named list [length of 7]`)
+#' - `days_format_narrow` (`named list [length of 7]`)
+#' - `days_format_short` (`named list [length of 7]`)
+#' - `days_format_wide` (`named list [length of 7]`)
+#' - `days_standalone_abbrev` (`named list [length of 7]`)
+#' - `days_standalone_narrow` (`named list [length of 7]`)
+#' - `days_standalone_short` (`named list [length of 7]`)
+#' - `days_standalone_wide` (`named list [length of 7]`)
+#' - `quarters_format_abbrev` (`named list [length of 4]`)
+#' - `quarters_format_narrow` (`named list [length of 4]`)
+#' - `quarters_format_wide` (`named list [length of 4]`)
+#' - `quarters_standalone_abbrev` (`named list [length of 4]`)
+#' - `quarters_standalone_narrow` (`named list [length of 4]`)
+#' - `quarters_standalone_wide` (`named list [length of 4]`)
+#' - `dayperiods_format_abbrev` (`named list [variable length]`)
+#' - `dayperiods_format_narrow` (`named list [variable length]`)
+#' - `dayperiods_format_wide` (`named list [variable length]`)
+#' - `dayperiods_standalone_abbrev` (`named list [variable length]`)
+#' - `dayperiods_standalone_narrow` (`named list [variable length]`)
+#' - `dayperiods_standalone_wide` (`named list [variable length]`)
+#' - `eras_abbrev` (`named list [length of 4]`)
+#' - `eras_names` (`named list [length of 4]`)
+#' - `eras_narrow` (`named list [length of 4]`)
+#' - `date_formats` (`named list [variable length]`)
+#' - `date_skeletons` (`named list [length of 4]`)
+#' - `time_formats` (`named list [variable length]`)
+#' - `time_skeletons` (`named list [variable length]`)
+#' - `date_time_patterns` (`named list [length of 4]`)
+#' - `date_time_available_formats` (`named list [variable length]`)
+#' - `date_time_append_items` (`named list [length of 11]`)
+#' - `date_time_interval_formats` (`named list [variable length]`)
+#'
+"dates_generic"
 
 #' A table with localized numerical attributes and descriptors
 #'
@@ -301,19 +359,6 @@
 #'
 "currencies"
 
-#' A table with localized character labels and descriptors
-#'
-#' @description
-#' The `character_labels` table contains localized data for character labels
-#' across `r length(all_locales)` locales. There are `r length(all_locales)`
-#' rows and the following 3 columns:
-#' 
-#' - `locale` (`character`)
-#' - `character_label_patterns` (`named list [variable length]`)
-#' - `character_labels` (`named list [variable length]`)
-#'
-"character_labels"
-
 #' A table with localized character data
 #'
 #' @description
@@ -335,3 +380,211 @@
 #' - `stricter_scope_number` (`named list [length of 2]`)
 #'
 "characters"
+
+#' A table with localized character labels and descriptors
+#'
+#' @description
+#' The `character_labels` table contains localized data for character labels
+#' across `r length(all_locales)` locales. There are `r length(all_locales)`
+#' rows and the following 3 columns:
+#' 
+#' - `locale` (`character`)
+#' - `character_label_patterns` (`named list [variable length]`)
+#' - `character_labels` (`named list [variable length]`)
+#'
+"character_labels"
+
+#' A table with localized delimiter values
+#'
+#' @description
+#' The `delimiters` table contains localized information on the preferred and
+#' alternate sets of quotation marks across `r length(all_locales)` locales.
+#' There are `r length(all_locales)` rows and the following 5 columns:
+#'
+#' - `locale` (`character`)
+#' - `quotation_start` (`character`)
+#' - `quotation_end` (`character`)
+#' - `alt_quotation_start` (`character`)
+#' - `alt_quotation_end` (`character`)
+#' 
+"delimiters"
+
+#' A table with localized layout data
+#'
+#' @description
+#' The `layout` table contains data on text layout across 
+#' `r length(all_locales)` locales. There are `r length(all_locales)` rows and
+#' the following 3 columns:
+#'
+#' - `locale` (`character`)
+#' - `character_order` (`character`)
+#' - `line_order` (`character`)
+#' 
+"layout"
+
+#' A table with metadata for a wide variety of script types
+#'
+#' @description
+#' The `script_metadata` table contains metadata for various script types.
+#' There are `r nrow(script_metadata)` rows and the following 11 columns:
+#'
+#' - `script` (`character`)
+#' - `sample_char` (`character`)
+#' - `rank` (`integer`)
+#' - `script` (`character`)
+#' - `rtl` (`character`)
+#' - `lb_letters` (`character`)
+#' - `has_case` (`character`)
+#' - `shaping_req` (`character`)
+#' - `ime` (`character`)
+#' - `density` (`integer`)
+#' - `origin_country` (`character`)
+#' - `likely_lang` (`character`)
+#' 
+"script_metadata"
+
+#' A table with localized data on units
+#'
+#' @description
+#' The `units` table contains localized character data across
+#' `r length(all_locales)` locales. There are `r nrow(i18n::units)` rows and
+#' `r ncol(i18n::units)` columns. Each row represents a display type (`"long"`,
+#' `"short"`, or `"narrow"`) for each of the locales.
+#' 
+#' Following the `locale` and `type` columns, each unit and its subelements
+#' are provided as a cluster of columns in the form
+#' `"<<category>-unit name>.<subelement name>"`. The subelement names are:
+#' 
+#' - `"displayName"`
+#' - `"unitPattern-count-one"`
+#' - `"unitPattern-count-other"`
+#' - `"unitPattern-count-zero"`
+#' - `"unitPattern-count-two"`
+#' - `"unitPattern-count-few"`
+#' - `"unitPattern-count-many"`
+#'
+#' The `"displayName"` is the localized name for a unit when displayed outside
+#' of a pattern. The `"unitPattern-count-*"` subelements provide the localized
+#' forms of the unit when the value is exactly `0` (`"unitPattern-count-one"`),
+#' `1` (`"unitPattern-count-one"`), `2` (`"unitPattern-count-two"`), and, when
+#' the value constitutes a few (`"unitPattern-count-few"`) or many
+#' (`"unitPattern-count-many"`) units. Every other case is handled by
+#' `"unitPattern-count-other"`.
+#'
+"units"
+
+#' A table with rule sets for naming periods of a day
+#'
+#' @description
+#' The `day_periods` table contains rules for naming periods of time throughout
+#' a day. There are `r nrow(day_periods)` rows that comprise a day period name
+#' and rule for a locale. There may be only two rows associated with a locale
+#' but many more if a locale has many names for periods of a day. The following
+#' columns are included:
+#'
+#' - `locale` (`character`)
+#' - `period` (`character`)
+#' - `from` (`character`)
+#' - `to` (`character`)
+#' - `at` (`character`)
+#' 
+#' The `period` value provides an identifier for the period of time. For a given
+#' locale there may typically be `"afternoon1"` and `"evening1"` period
+#' identifiers. Some may have quite a few periods defined (perhaps with
+#' `"morning1"` and `"morning2"` rules). A period is either a block of time
+#' defined by the `from` and `to` columns, or, a set time (like `"noon"` and
+#' `"midnight"`) found in the `at` column. The `period` values are typically
+#' obtained from this dataset in order to obtain localized text from
+#' the [dates] and [dates_generic] datasets (within the `dayperiods_*` columns).
+#' 
+"day_periods"
+
+#' A table with localized names for all time zone exemplar cities
+#'
+#' @description
+#' The `tz_exemplar` table contains localized names for all exemplar cities used
+#' in time zone names. There are `r length(all_locales)` rows and a column for
+#' each exemplar city name (comprising `r ncol(tz_exemplar) - 1` columns; the
+#' `locale` column is first). To have syntactical column names, all slashes in
+#' exemplar city names are instead represented with period characters (e.g.,
+#' `Indiana/Vincennes` is `Indiana.Vincennes`). Some exemplar cities are not
+#' actually cities and these are: `UTC.long.standard`
+#' (*en*: `"Coordinated Universal Time"`), `UTC.short.standard` (*en*: `"UTC"`),
+#' and `Unknown` (*en*: `"Unknown City"`).
+#' 
+"tz_exemplar"
+
+#' A table with localized time zone names for all metazones
+#'
+#' @description
+#' The `tz_metazone_names` table contains localized time zone names for all
+#' metazones (e.g., `America/Eastern`). There can be a variety of time zone
+#' names, comprising long and short forms (e.g., `Eastern Time` and `ET`) and
+#' this is further segmented by generic, standard, and daylight forms (an
+#' example, using short forms, is `ET`, `EST`, and `EDT`). There are
+#' `r nrow(tz_metazone_names)` rows and a column for
+#' each metazone (comprising `r ncol(tz_metazone_names) - 1` columns; the
+#' `locale` column is first).
+#' 
+"tz_metazone_names"
+
+#' A table that links canonical tz names with their metazone
+#'
+#' @description
+#' The `tz_metazone_users` table allows for a lookup of canonical time zone
+#' name to which metazone each uses. As an example, the canonical time zone
+#' `America/Vancouver` corresponds to the `America_Pacific` metazone (this is
+#' the long ID, but there is often a short ID available as well). The
+#' `metazone_long_id` can be used to get a localized metazone name by use of
+#' the [tz_metazone_names] table.
+#' 
+#' There are `r nrow(tz_metazone_users)` rows and the following 4 columns:
+#' 
+#' - `canonical_tz_name` (`character`)
+#' - `territory` (`character`)
+#' - `metazone_long_id` (`character`)
+#' - `metazone_short_id` (`character`)
+#' 
+"tz_metazone_users"
+
+#' A table with names of map-based time zones
+#'
+#' @description
+#' The `tz_map` table contains names for all map-based time zone names. There
+#' are `r nrow(tz_map)` rows and the following 4 columns:
+#' 
+#' - `canonical_tz_name` (`character`)
+#' - `territory` (`character`)
+#' - `tz_name` (`character`)
+#' 
+"tz_map"
+
+#' A table with localized time zone formatting information
+#'
+#' @description
+#' The `tz_formats` table contains localized formatting information across all
+#' locales. There are `r length(all_locales)` rows and the following 7 columns:
+#' 
+#' - `locale` (`character`)
+#' - `hour_format` (`character`)
+#' - `gmt_format` (`character`)
+#' - `gmt_zero_format` (`character`)
+#' - `region_format` (`character`)
+#' - `region_format_daylight` (`character`)
+#' - `region_format_standard` (`character`)
+#' - `region_format_fallback` (`character`)
+#' 
+"tz_formats"
+
+#' A table with BCP47 Olson/IANA-style and canonical time zone IDs 
+#'
+#' @description
+#' The `tz_bcp_id` table provides a lookup for converting between BCP47
+#' Olson/IANA-style time zone IDs and the canonical forms (according to BCP47).
+#' There are `r nrow(tz_bcp_id)` rows and the following 3 columns:
+#' 
+#' - `tz_bcp_id` (`character`)
+#' - `tz_canonical` (`character`)
+#' - `description` (`character`)
+#' 
+"tz_bcp_id"
